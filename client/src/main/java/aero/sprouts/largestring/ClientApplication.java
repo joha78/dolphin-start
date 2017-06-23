@@ -2,8 +2,8 @@
 package aero.sprouts.largestring;
 
 import aero.sprouts.largestring.view.MyView;
-import com.canoo.dolphin.client.ClientContext;
-import com.canoo.dolphin.client.javafx.DolphinPlatformApplication;
+import com.canoo.platform.client.ClientContext;
+import com.canoo.platform.client.javafx.DolphinPlatformApplication;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 

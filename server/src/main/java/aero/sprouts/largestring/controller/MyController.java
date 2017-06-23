@@ -2,9 +2,9 @@ package aero.sprouts.largestring.controller;
 
 import aero.sprouts.largestring.Constants;
 import aero.sprouts.largestring.model.MyModel;
-import com.canoo.dolphin.server.DolphinAction;
-import com.canoo.dolphin.server.DolphinController;
-import com.canoo.dolphin.server.DolphinModel;
+import com.canoo.platform.server.DolphinAction;
+import com.canoo.platform.server.DolphinController;
+import com.canoo.platform.server.DolphinModel;
 import org.apache.commons.io.IOUtils;
 
 import javax.annotation.PostConstruct;
@@ -45,8 +45,10 @@ public class MyController {
         this.model.setLargeString(Base64.getEncoder().encodeToString(byteArray));
     }
 
+    private int counter = 0;
+
     @DolphinAction
     public void action2() {
-        this.model.setLargeString("short");
+        this.model.setLargeString("shört" + (counter++));
     }
 }

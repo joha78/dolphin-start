@@ -2,8 +2,8 @@ package aero.sprouts.largestring.view;
 
 import aero.sprouts.largestring.Constants;
 import aero.sprouts.largestring.model.MyModel;
-import com.canoo.dolphin.client.ClientContext;
-import com.canoo.dolphin.client.javafx.view.AbstractFXMLViewBinder;
+import com.canoo.platform.client.ClientContext;
+import com.canoo.platform.client.javafx.view.AbstractFXMLViewBinder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,7 +41,8 @@ public class MyView extends AbstractFXMLViewBinder<MyModel> {
     void onButton2(ActionEvent event) {
         this.message.setText("Please wait...");
         invoke("action2").thenRun(() -> {
-            if (getModel().getLargeString().equals("short")) {
+            System.out.println(getModel().getLargeString());
+            if (getModel().getLargeString().startsWith("shört")) {
                 this.message.setText("Success!");
             } else {
                 this.message.setText("Failed!");
